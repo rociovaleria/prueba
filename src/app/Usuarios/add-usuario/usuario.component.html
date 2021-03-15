@@ -1,0 +1,65 @@
+  <div class="main-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+          <form [formGroup]="form" (ngSubmit)="saveSocio($event)">
+          <div class="card">
+            <div class="card-header card-header-danger">
+              <h4 class="card-title">Nuevo Socio </h4>
+            </div>
+            <div class="card-body">
+  
+              <mat-card>
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image">
+                  </div>
+                  <mat-card-title>Nuevo Producto</mat-card-title>
+                  <mat-card-subtitle>Ingrese los datos de productos correctamente</mat-card-subtitle>
+                </mat-card-header>
+                <div class="example-container">
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput formControlName="nombre" type="text">
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Apellido</mat-label>
+                    <input matInput formControlName="apellido" type="text">
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Direccion</mat-label>
+                    <input matInput formControlName="direccion" type="text">
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Telefono</mat-label>
+                    <input matInput formControlName="telefono" type="text">
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Ci</mat-label>
+                    <input matInput formControlName="ci" type="text">
+                  </mat-form-field>
+                  <br>
+                
+            </div>
+                <mat-card-actions>
+                  <button mat-raised-button color="primary" type="submit" >Guardar</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+

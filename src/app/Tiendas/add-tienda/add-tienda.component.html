@@ -1,0 +1,55 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <form [formGroup]="form" (ngSubmit)="saveTienda($event)">
+                    <div class="card">
+                        <div class="card-header card-header-danger">
+                            <h4 class="card-title">Nueva Tienda</h4>
+                        </div>
+                        <div class="card-body">
+
+                            <mat-card>
+                                <mat-card-header>
+                                    <div mat-card-avatar class="example-header-image">
+                                    </div>
+                                    <mat-card-title>Nueva Tienda</mat-card-title>
+                                    <mat-card-subtitle>Ingrese los datos de tiendas correctamente</mat-card-subtitle>
+                                </mat-card-header>
+
+                                <div class="example-container">
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>Numero de tienda</mat-label>
+                                        <input matInput type="number" formControlName="numero">
+                                    </mat-form-field>
+                                    <br>
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>Nombre de tienda</mat-label>
+                                        <input matInput type="text" formControlName="nombre">
+                                    </mat-form-field>
+                                    <br>
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>Direccion</mat-label>
+                                        <input matInput type="text" formControlName="direccion">
+
+                                    </mat-form-field>
+                                  
+                                    <br>
+                                    <mat-form-field class="example-full-width">
+                                        <mat-label>{{id}}</mat-label>
+                                        <input matInput type="number" formControlName="socioId" [value]="id">
+
+                                    </mat-form-field>
+
+                                </div>
+                                <mat-card-actions>
+                                    <button mat-raised-button color="primary" type="submit" >Guardar</button>
+                                  </mat-card-actions>
+                            </mat-card>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

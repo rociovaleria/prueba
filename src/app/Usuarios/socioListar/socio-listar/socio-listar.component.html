@@ -1,0 +1,58 @@
+<div class="main-content">
+    <div class="col-md-12">
+      <div class="card card-plain">
+        <div class="card-header card-header-danger">
+          <h4 class="card-title mt-0"> Socios </h4>
+          <button routerLink="/sociocreate" class="button">Nuevo</button>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead class="col-md-12">
+                <tr>
+                  <th>
+                   <h5>Nombre</h5> 
+                  </th>
+                  <th>
+                    <h5>Apellido</h5>
+                    
+                  </th>
+                  <th>
+                    <h5>
+                      Telefono
+                    </h5>
+                    
+                  </th>
+                 
+                  <th>
+                    <h5>Detalles</h5>
+                    
+                  </th>
+                </tr>
+    
+              </thead>
+              <tbody
+                 *ngFor="let socio of socios">
+                  <tr>
+                      <td>
+                      <h6>{{socio.nombre}}</h6>
+                    </td>
+                    
+                    <td>
+                      <h6>{{socio.apellido}}</h6>
+                      </td>
+                    <td>
+                    <h6>{{socio.telefono}}</h6>
+                    </td>
+                    <th>
+                      <button routerLink="/tienda/{{socio.id}}" class="button1">Tienda</button>
+        
+                    </th>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>

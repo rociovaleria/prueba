@@ -1,0 +1,68 @@
+<div class="main-content">
+    <div class="col-md-12">
+      <div class="card card-plain">
+        <div class="card-header card-header-danger">
+          <h4 class="card-title mt-0"> Productos </h4>
+        
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead class="col-md-12">
+                <tr>
+                  <th>
+                   <h5>Marca</h5> 
+                  </th>
+                  <th>
+                    <h5>Image</h5>
+                    
+                  </th>
+                  <th>
+                    <h5>
+                      Codigo
+                    </h5>
+                    
+                  </th>
+                  <th>
+                    <h5>Tipo</h5>
+                    
+                  </th>
+                  <th>
+                    <h5>Detalles</h5>
+                    
+                  </th>
+                </tr>
+    
+              </thead>
+              <tbody
+                 *ngFor="let producto of productos">
+                  <tr>
+                      <td>
+                      <h6>{{producto.marca}}</h6>
+                    </td>
+                    <td>
+    
+                      <img [src]="producto.image" alt="" width="50" height="50">
+                    </td>
+                    <td>
+                      <h6>{{producto.modelo}}</h6>
+                      </td>
+                    <td>
+                    <h6>{{producto.tipo}}</h6>
+                    </td>
+                    <th>
+                    
+                      <button (click)="publicar(producto.descripcion,producto.image,producto.marca,producto.modelo,producto.procesador,producto.tarjetagrafica,producto.precio)" class="button1">Publicar</button>
+                      <button (click)="ofertar(producto.modelo, producto.image)" class="button1">Ofertar</button>
+        
+                    </th>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  
+    <app-oferta [oferta]="clickedOferta" (ofertamake)="onClickOfertar($event)"></app-oferta>

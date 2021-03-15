@@ -1,0 +1,139 @@
+
+  <div class="main-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+          <form [formGroup]="form" (ngSubmit)="saveProduct($event)">
+          <div class="card">
+            <div class="card-header card-header-danger">
+              <h4 class="card-title">Nuevo Producto </h4>
+            </div>
+            <div class="card-body">
+  
+              <mat-card>
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image">
+                  </div>
+                  <mat-card-title>Nuevo Producto</mat-card-title>
+                  <mat-card-subtitle>Ingrese los datos de productos correctamente</mat-card-subtitle>
+                </mat-card-header>
+                <div class="example-container">
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Codigo</mat-label>
+                    <input matInput formControlName="codigoprod" type="text">
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Descripcion</mat-label>
+                    <input matInput formControlName="descripcion" type="text">
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Stock</mat-label>
+                    <input matInput formControlName="stock" type="number">
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Marca</mat-label>
+                    <mat-select formControlName="marca">
+                      <mat-option *ngFor="let marca of marcas" [value]="marca.value">
+                        {{marca.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Procesador</mat-label>
+                    <mat-select formControlName="procesador">
+                      <mat-option *ngFor="let procesador of procesadores" [value]="procesador.value" >
+                        {{procesador.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Generacion</mat-label>
+                    <mat-select formControlName="generacion">
+                      <mat-option *ngFor="let generacion of generaciones" [value]="generacion.value">
+                        {{generacion.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Modelo</mat-label>
+                    <input matInput formControlName="modelo" type="text">
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Memoria</mat-label>
+                    <input matInput formControlName="memoria" type="number">
+                    <span matSuffix>Gb &nbsp;</span>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Almacenamiento</mat-label>
+                    <input matInput formControlName="almacenamiento" type="text">
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Pantalla</mat-label>
+                    <input matInput formControlName="pantalla" type="number">
+                    <span matSuffix>pulgadas &nbsp;</span>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Tarjeta Grafica</mat-label>
+                    <input matInput formControlName="tarjetagrafica" type="text">
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Tipo</mat-label>
+                    <mat-select formControlName="tipo">
+                      <mat-option *ngFor="let tipo of tipos" [value]="tipo.value">
+                        {{tipo.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>{{id}}</mat-label>
+                    <input matInput formControlName="tiendaId" type="number" *ngIf="id" value="{{id}}">
+               
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Precio</mat-label>
+                    <input matInput formControlName="precio" type="number">
+                    <span matSuffix>$u$ &nbsp;</span>
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Descuento</mat-label>
+                    <input matInput formControlName="descuento" type="number">
+                    <span matSuffix>$u$ &nbsp;</span>
+                  </mat-form-field>
+                  <div class="example-full-width"> 
+                    <mat-label>Imagen</mat-label>
+                    <br>
+                    <div class="doc">
+                      <div class="box">
+                    <img *ngIf="image$ | async as image" [src]="image">
+                    <input type="file" (change)="uploadFile($event)">
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+                <mat-card-actions>
+                  <button mat-raised-button color="primary" type="submit" >Guardar</button>
+                </mat-card-actions>
+              </mat-card>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+

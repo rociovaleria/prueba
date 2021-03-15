@@ -1,0 +1,24 @@
+.example-card {
+    max-width: 1000px;
+  }
+  .button1 {
+    background-color: transparent; /* Green */
+    color: #fa9579;
+    border-radius: 8px;
+    border: #fa9579 2px solid;
+    padding: 4px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .button1:hover {
+    background-color: #fa9579;
+    color: white;
+  }
+  
+ 

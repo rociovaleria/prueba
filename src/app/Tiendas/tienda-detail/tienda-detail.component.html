@@ -1,0 +1,61 @@
+<div class="main-content">
+    <div class="col-md-12">
+      <div class="card card-plain">
+        <div class="card-header card-header-danger">
+          <h4 class="card-title mt-0"> Bienvenido a tu Tiendas </h4>
+       
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead class="col-md-12">
+                <tr>
+                  <th>
+                   <h5>Numero</h5> 
+                  </th>
+                  <th>
+                    <h5>Nombre</h5>
+                    
+                  </th>
+                  <th>
+                    <h5>
+                      Propietario
+                    </h5>
+                    
+                  </th>
+                 
+                  <th>
+                    <h5>Detalles</h5>
+                    
+                  </th>
+                </tr>
+    
+              </thead>
+              <tbody
+                 *ngFor="let tienda of tienda">
+                  <tr>
+                      <td>
+                      <h6>{{tienda.nombre}}</h6>
+                    </td>
+                    
+                    <td>
+                      <h6>{{tienda.numero}}</h6>
+                      </td>
+                    <td>
+                    <h6>{{tienda.direccion}}</h6>
+                    </td>
+                    <th>
+                        <button routerLink="/productos/{{tienda.id}}" class="button">Mis Productos</button>
+                     
+                      <button routerLink="/createProduct/{{tienda.id}}" class="button1">Agregar Productos</button>
+                      <button routerLink="/reservas/{{tienda.id}}" class="button2">Reservas</button>
+                    </th>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
